@@ -25,7 +25,7 @@ export default function HomePage() {
   const slug = process.env.NEXT_PUBLIC_GITHUB_APP_SLUG;
   const installHref = slug
     ? `https://github.com/apps/${slug}/installations/new`
-    : "#install";
+    : null;
 
   return (
     <main className="space-y-10">
@@ -79,19 +79,20 @@ export default function HomePage() {
 
       <WorkflowChecker />
 
-      <section className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
-        <a
-          href={installHref}
-          id={slug ? undefined : "install"}
-          className="inline-flex items-center rounded-lg bg-[var(--accent)] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[var(--accent-hover)]"
-        >
-          Install the GitHub App
-        </a>
-        <p className="text-xs text-[var(--muted)]">
-          On install (and when workflow files change), the app scans{" "}
-          <code>.github/workflows</code> and opens a fix PR for hard double-run cases.
-        </p>
-      </section>
+      {installHref ? (
+        <section className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
+          <a
+            href={installHref}
+            className="inline-flex items-center rounded-lg bg-[var(--accent)] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[var(--accent-hover)]"
+          >
+            Install the GitHub App
+          </a>
+          <p className="text-xs text-[var(--muted)]">
+            On install (and when workflow files change), the app scans{" "}
+            <code>.github/workflows</code> and opens a fix PR for hard double-run cases.
+          </p>
+        </section>
+      ) : null}
 
       <footer className="border-t border-[var(--border)] pt-6 text-xs text-[var(--muted)]">
         <a href="/privacy" className="hover:text-[var(--fg)] hover:underline">
