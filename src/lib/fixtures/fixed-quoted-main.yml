@@ -1,0 +1,11 @@
+# quoted "main" should still count as fixed
+name: CI
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4

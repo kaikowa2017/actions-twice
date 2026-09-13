@@ -1,0 +1,9 @@
+# pull_request_target alone must not be flagged
+name: CI
+on:
+  pull_request_target:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4

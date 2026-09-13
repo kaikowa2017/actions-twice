@@ -1,0 +1,9 @@
+# Unscoped list-form: both push and pull_request (hard)
+name: CI
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm test
