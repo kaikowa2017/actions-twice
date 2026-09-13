@@ -1,3 +1,5 @@
+import WorkflowChecker from "../components/WorkflowChecker";
+
 const BEFORE = `name: CI
 on: [push, pull_request]
 jobs:
@@ -74,6 +76,8 @@ export default function HomePage() {
           </pre>
         </div>
       </section>
+
+      <WorkflowChecker />
 
       <section className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
         <a
