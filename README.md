@@ -1,6 +1,6 @@
 # actions-twice
 
-Find and fix **GitHub Actions running twice** on the same commit（**GitHub Actions が2回走る**）.
+Find and fix **GitHub Actions running twice** on the same commit.
 
 When a workflow listens to both `push` and `pull_request` and `push` is not limited to `main`/`master`, a same-repo PR schedules CI twice. This app detects that pattern and opens a fix PR that scopes `push` to the default branch.
 

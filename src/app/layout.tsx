@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "actions-twice — GitHub Actions running twice",
   description:
-    "Find and fix GitHub Actions workflows that run twice on the same commit. GitHub Actions が2回走る問題を検出して修正PRを開きます。",
+    "Find and fix GitHub Actions workflows that run twice on the same commit.",
 };
 
 export default function RootLayout({

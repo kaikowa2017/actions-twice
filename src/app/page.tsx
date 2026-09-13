@@ -35,7 +35,7 @@ export default function HomePage() {
           GitHub Actions running twice
         </h1>
         <p className="text-lg text-[var(--muted)]">
-          GitHub Actions が2回走る — same commit, two workflow runs.
+          Same commit, two workflow runs.
         </p>
       </header>
 
@@ -93,7 +93,7 @@ export default function HomePage() {
         <a href="/privacy" className="hover:text-[var(--fg)] hover:underline">
           Privacy
         </a>
-        <span className="mx-2">·</span>
+        <span className="mx-2">|</span>
         <a
           href="https://github.com/kaikowa2017/actions-twice"
           className="hover:text-[var(--fg)] hover:underline"
