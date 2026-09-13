@@ -17,6 +17,7 @@
   "dependencies": {
     "@octokit/app": "^15.1.6",
     "@octokit/webhooks": "^13.9.1",
+    "@vercel/analytics": "^1.5.0",
     "next": "^15.5.25",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
